@@ -14,6 +14,7 @@
 fun main(){
 var person = Human("Lucy",22,60)
     person.eat(2)
+    println(person.weight)
     person.speak("Hi,welcome to my world.")
     person.birthday()
 
@@ -24,9 +25,10 @@ var person = Human("Lucy",22,60)
     println(instance.email)
 }
 class Human(var name:String,var age:Int,var weight:Int){
-fun eat(foodweight: Int) {
+fun eat(foodweight: Int): Int {
     weight += foodweight
-    println("I am eating $weight kgs of food.")
+    println("I am eating $foodweight kgs of food.")
+    return weight
 
 }
     fun speak(speech:String) {
